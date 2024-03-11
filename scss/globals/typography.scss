@@ -1,0 +1,23 @@
+@use 'fonts' as ft;
+@use '../util/' as u;
+a, a:any-link, a:active {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+i {
+  color: white;
+  font-size: ft.$fts-smallest;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+
+ul {
+  list-style-type: none;
+}

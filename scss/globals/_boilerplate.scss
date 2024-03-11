@@ -1,0 +1,177 @@
+@use 'fonts' as ft;
+@use '../util/' as u;
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: ft.$fm;
+  height: 1000vh;
+ 
+}
+.embody {
+  background-color: rgb(25, 125, 212);
+  height: 5vh;
+  position: sticky;
+  }
+
+
+.top{
+  font-size: ft.$fts-small;
+  background-color: #f1f1f2;
+  width: 100%;
+  position: sticky;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  height: 5vh;
+  @include u.breakpoint(medium) {
+    justify-content: flex-start;
+  }
+  
+ 
+
+  @include u.breakpoint(x-large) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+
+  &__container {
+    display: flex;
+    width: clamp(600px, 50vw, 1000px);
+    align-items: center;
+
+   
+  }
+  
+
+  &__leftside {
+    display: flex;
+    width: 300px;
+    
+    
+    align-items: center;
+    font-weight: map-get(ft.$font-weights, medium);
+  }
+
+  &__leftside:hover {
+    text-decoration: underline;
+    color:#f68b1e;
+  }
+
+
+  &__rightside {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__jumia {
+    margin-right: 10px;
+    font-weight: map-get(ft.$font-weights, bold);
+    font-size: ft.$fts-small;
+    letter-spacing: 1.1px;
+    position: relative;
+  }
+
+}
+
+
+
+
+.checked {
+  background: #f68b1e;
+  border-radius:  50%;
+  padding: 2px;
+
+}
+
+.sell {
+  color: #f68b1e;
+}
+
+.jumia__first {
+  font-size: ft.$fts-tiny;
+  position: absolute;
+  bottom: 3px;
+  right: -14px;
+  padding: 1px;
+  
+}
+
+.top___shield {
+  margin-left: 15px;
+  font-weight: map-get(ft.$font-weights, medium);
+  color: rgba(148, 147, 147, 0.542);
+ 
+  & .fa-shield {
+    color: rgba(148, 147, 147, 0.542);
+    font-size: ft.$fts-medium;
+    position: relative;
+  }
+
+  & .pay-logo {
+    color: rgba(148, 147, 147, 0.542);
+    margin-left: 2px;
+    font-size: ft.$fts-medium;
+  }
+
+  & .checked {
+    background:rgba(176, 176, 176, 0.641);
+    color: rgba(255, 255, 255, 0.695);
+    font-size: ft.$fts-minute;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+  }
+
+  &:hover {
+    color:rgb(25, 125, 212);
+
+    & .checked {
+      background-color:#f68b1e;
+      color: white;
+    }
+
+    & .fa-shield {
+      color:rgb(25, 125, 212);
+    } 
+
+    & .pay-logo {
+      color:rgb(25, 125, 212);
+    }
+  }
+
+}
+
+
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.container {
+  background-color: white;
+  width: clamp(600px, 50vw, 1000px);
+  height: 100vh;
+  padding: 15px;
+  @include u.breakpoint(medium) {
+    width: 100%;
+  }
+  
+}
